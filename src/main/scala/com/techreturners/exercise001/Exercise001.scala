@@ -18,7 +18,7 @@ class Exercise001 {
     initialPrice + Math.round(vatToAdd * scale) / scale // round up VAT, add to initial price and return
   }
 
-  def reverse(sentence: String) : String = ""
+  def reverse(sentence: String) : String = sentence.reverse
 
   /**
    * Here we show using a Scala sequence which is a type of collection
