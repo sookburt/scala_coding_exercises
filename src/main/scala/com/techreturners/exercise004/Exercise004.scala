@@ -13,5 +13,11 @@ class Exercise004(var dateTime: LocalDateTime) {
     this(LocalDateTime.of(dateTime.getYear, dateTime.getMonth, dateTime.getDayOfMonth, 0,0,0))
   }
 
-  def getDateTimeWithGigaSecond: LocalDateTime = dateTime.plusSeconds(1000000000)
+  def getDateTimeWithDefinedSecond(seconds: Long): LocalDateTime = dateTime.plusSeconds(seconds)
+
+  def getDateTimeWithGigaSecond: LocalDateTime = getDateTimeWithDefinedSecond(1000000000)
+
+  def getDateWithGigaSecond: LocalDate = getDateTimeWithGigaSecond.toLocalDate
+
+
 }
