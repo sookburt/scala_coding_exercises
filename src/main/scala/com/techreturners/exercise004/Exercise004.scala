@@ -9,5 +9,9 @@ class Exercise004(var dateTime: LocalDateTime) {
   // Try constructing a "LocalDateTime" from a "LocalDate"
   // You might need to default the time to be something like midnight
 
-  def getDateTimeWithGigaSecond: LocalDateTime = null
+  def this(dateTime: LocalDate ) = {
+    this(LocalDateTime.of(dateTime.getYear, dateTime.getMonth, dateTime.getDayOfMonth, 0,0,0))
+  }
+
+  def getDateTimeWithGigaSecond: LocalDateTime = dateTime.plusSeconds(1000000000)
 }
