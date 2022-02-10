@@ -4,18 +4,13 @@ class Exercise003 {
 
   def getIceCreamCode(iceCreamFlavour: String): Int = {
 
-    val flavours = Array("Pistachio",
-      "Raspberry Ripple",
-      "Vanilla",
-      "Mint Chocolate Chip",
-      "Chocolate",
-      "Mango Sorbet"
-    )
-    flavours.indexOf(iceCreamFlavour)
+    val iceCreamFlavours = new InMemoryIceCreamOptions
+    iceCreamFlavours.getFlavourCode(iceCreamFlavour)
   }
 
   def iceCreamFlavours: Array[String] = {
-    throw new UnsupportedOperationException("You can delete this line and add your code here.")
+    val iceCreamFlavours = new InMemoryIceCreamOptions
+    iceCreamFlavours.flavours
   }
 
 }
